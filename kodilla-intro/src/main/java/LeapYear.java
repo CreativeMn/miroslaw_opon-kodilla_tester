@@ -10,7 +10,6 @@ public class LeapYear {
             System.out.println("Rok nieprzestępny.");
         }
     }
-
     public static int getInt() {
         return new Scanner(System.in).nextInt();
     }
