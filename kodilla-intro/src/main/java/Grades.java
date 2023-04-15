@@ -5,16 +5,16 @@ public class Grades {
     public Grades() {
         this.grades = new int[10];
         this.size = 0;
+        add(2);
         add(5);
+        add(7);
+        add(9);
         add(3);
+        add(4);
         add(2);
         add(1);
+        add(0);
         add(4);
-        add(3);
-        add(5);
-        add(6);
-        add(4);
-        add(3);
         int last = lastGrade(this.grades);
         double average = gradesAverage(this.grades);
 
