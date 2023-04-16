@@ -1,6 +1,6 @@
 import java.util.Random;
 public class RandomNumbers {
-    public int[] collectNumbers() {
+    public int[] Numbers() {
         int[] randomNumbers = new int[0];
 
         Random rdm = new Random(31);
@@ -13,10 +13,10 @@ public class RandomNumbers {
         return randomNumbers;
     }
     public void minValue() {
-        int [] numbers = collectNumbers();
+        int [] numbers = Numbers();
 
     }
     public void maxValue() {
-        int [] numbers = collectNumbers();
+        int [] numbers = Numbers();
     }
 }
