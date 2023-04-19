@@ -13,7 +13,6 @@ package com.kodilla.inheritance.homework;
         public void theNewestOff() {
             System.out.println("Najnowszy system wyłączony");
         }
-
     }
 
 
