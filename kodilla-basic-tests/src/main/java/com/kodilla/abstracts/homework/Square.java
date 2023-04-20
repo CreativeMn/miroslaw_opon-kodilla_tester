@@ -1,16 +1,19 @@
 package com.kodilla.abstracts.homework;
 
 public class Square extends Shape {
-    public Square() {
-        super(20,30);
+    private double side;
+
+    public Square(double side) {
+        this.side = side;
     }
 
     @Override
-    public void surfaceArea() {
-        System.out.println("Powierzchnia kwadratu to: " + getSurfaceArea());
+    public double getSurface() {
+        return side * side;
     }
+
     @Override
-    public void circumference() {
-        System.out.println("Obwód kwadratu to: " + getCircumference());
+    public double getCircumference() {
+        return side * 4;
     }
 }

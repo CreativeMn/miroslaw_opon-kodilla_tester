@@ -1,15 +1,19 @@
 package com.kodilla.abstracts.homework;
 
 public class Circle extends Shape {
-    public Circle() {
-        super(40,50);
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
     }
+
     @Override
-    public void surfaceArea() {
-        System.out.println("Pole koła to: " + getSurfaceArea());
+    public double getSurface() {
+        return Math.PI * radius * radius;
     }
+
     @Override
-    public void circumference() {
-        System.out.println("Obwód koła to: " + getCircumference());
+    public double getCircumference() {
+        return 2 * Math.PI * radius;
     }
 }

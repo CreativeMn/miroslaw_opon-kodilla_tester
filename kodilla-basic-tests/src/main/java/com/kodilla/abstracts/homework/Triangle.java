@@ -1,15 +1,25 @@
 package com.kodilla.abstracts.homework;
 
 public class Triangle extends Shape {
-    public Triangle() {
-        super(60,70);
+    private double base;
+    private double side1;
+    private double side2;
+    private double height;
+
+    public Triangle(double base, double side1, double side2, double height) {
+        this.base = base;
+        this.side1 = side1;
+        this.side2 = side2;
+        this.height = height;
     }
+
     @Override
-    public void surfaceArea() {
-        System.out.println("Pole trójkąta to: " + getSurfaceArea());
+    public double getSurface() {
+        return 0.5 * base * height;
     }
+
     @Override
-    public void circumference() {
-        System.out.println("Obwód trójkąta to: " + getCircumference());
+    public double getCircumference() {
+        return base + side1 + side2;
     }
 }
