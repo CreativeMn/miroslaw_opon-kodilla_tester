@@ -7,10 +7,10 @@ public class Square extends Shape {
 
     @Override
     public void surfaceArea() {
-        System.out.println("Powierzchnia kwadratu.");
+        System.out.println("Powierzchnia kwadratu to: " + getSurfaceArea());
     }
     @Override
     public void circumference() {
-        System.out.println("Obwód kwadratu.");
+        System.out.println("Obwód kwadratu to: " + getCircumference());
     }
 }
