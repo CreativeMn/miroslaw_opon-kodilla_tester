@@ -16,9 +16,9 @@ public class Application {
 
     Calculator calculator = new Calculator();
     double pwrResult = calculator.pow(3,3);
-    boolean correct = ResultChecker.assertEquals(27, pwrResult);
-        if (correct) {
-        System.out.println("Potęgowanie liczby 3 do potęgi trzeciej :" + pwrResult);
+    boolean good = ResultChecker.assertEquals(27, pwrResult);
+        if (good) {
+        System.out.println("Potęgowanie liczby 3 do potęgi trzeciej poprawnie wynosi:" + pwrResult);
     } else {
         System.out.println("Nieprawidłowe potęgowanie.");
     }
