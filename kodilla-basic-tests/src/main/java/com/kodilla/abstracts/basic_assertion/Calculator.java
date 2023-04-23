@@ -1,5 +1,4 @@
 package com.kodilla.abstracts.basic_assertion;
-import java.lang.Math;
 
 public class Calculator {
     public int sum(int a, int b) {
@@ -7,11 +6,11 @@ public class Calculator {
     }
 
     public int subtract(int a, int b) {
-        return a - b;
+        return b - a;
     }
 
-    public static double pow (double liczbaCałkowita, double potęga) {
-        return double pwrResult;
+    public int square(int a) {
+        return a * a;
     }
 }
 
