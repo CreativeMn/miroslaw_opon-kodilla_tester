@@ -18,7 +18,7 @@ public class Bentley implements Car {
 
     @Override
     public int getSpeed() {
-        return speed * 4;
+        return speed;
     }
 
     @Override
