@@ -10,11 +10,11 @@ public class UsersManager {
     }
 
     public static List<String> filterChemistGroupUsernames() {
-        List<String> usernames = UsersRepository.getUsersList()   // [1]
+        List<String> usernames = UsersRepository.getUsersList()
                 .stream()
                 .filter(user -> user.getGroup().equals("Chemists"))
                 .map(UsersManager::getUserName)
-                .collect(Collectors.toList());                      // [2]
+                .collect(Collectors.toList());
 
         return usernames;
     }
