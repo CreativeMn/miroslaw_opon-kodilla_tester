@@ -1,0 +1,70 @@
+CREATE TABLE ISSUESLISTS
+(
+    ID          SERIAL PRIMARY KEY,
+    NAME   		VARCHAR(100)
+    );
+
+CREATE TABLE ISSUES
+(
+    ID				SERIAL PRIMARY KEY,
+    ISSUESLIST_ID	            BIGINT UNSIGNED NOT NULL,
+    USER_ID_ASSIGNEDTO        BIGINT UNSIGNED NOT NULL,
+    SUMMARY			      VARCHAR(1024),
+    DESCRIPTION		      VARCHAR(1024),
+	FOREIGN KEY (USER_ID_ASSIGNEDTO) REFERENCES USERS (ID)
+	);
+
+INSERT INTO ISSUESLISTS (NAME)
+VALUES ("ToDo");
+
+INSERT INTO ISSUESLISTS (NAME)
+VALUES ("In progress");
+
+INSERT INTO ISSUESLISTS (NAME)
+VALUES ("Done");
+
+INSERT INTO ISSUES (ISSUESLIST_ID, USER_ID_ASSIGNEDTO, SUMMARY, DESCRIPTION)
+VALUES (1, 1, "Write scheme", "Write point 1 and 2");
+
+INSERT INTO ISSUES (ISSUESLIST_ID, USER_ID_ASSIGNEDTO, SUMMARY, DESCRIPTION)
+VALUES (1, 2, "Rewrite documents", "Rewrite point 1-10");
+
+INSERT INTO ISSUES (ISSUESLIST_ID, USER_ID_ASSIGNEDTO, SUMMARY, DESCRIPTION)
+VALUES (1, 1, "Prepare ppt presentation", "Prepare 20 slides");
+
+INSERT INTO ISSUES (ISSUESLIST_ID, USER_ID_ASSIGNEDTO, SUMMARY, DESCRIPTION)
+VALUES (1, 1, "Train presentation", "1 hour for repetition before meeting");
+
+INSERT INTO ISSUES (ISSUESLIST_ID, USER_ID_ASSIGNEDTO, SUMMARY, DESCRIPTION)
+VALUES (1, 3, "Reserve room for presentation", "2 hours for meeting");
+
+INSERT INTO ISSUES (ISSUESLIST_ID, USER_ID_ASSIGNEDTO, SUMMARY, DESCRIPTION)
+VALUES (2, 4, "Draw sketches for presentation", "3 hours for 5 sketches");
+
+INSERT INTO ISSUES (ISSUESLIST_ID, USER_ID_ASSIGNEDTO, SUMMARY, DESCRIPTION)
+VALUES (2, 5, "Accept sketches for presentation", "5 sketches done in AdobeIllustrator");
+
+INSERT INTO ISSUES (ISSUESLIST_ID, USER_ID_ASSIGNEDTO, SUMMARY, DESCRIPTION)
+VALUES (2, 3, "Order catering for meeting", "Drinks, lunch boxes");
+
+INSERT INTO ISSUES (ISSUESLIST_ID, USER_ID_ASSIGNEDTO, SUMMARY, DESCRIPTION)
+VALUES (2, 3, "Order gadgets for meeting", "Pens, notebooks, bookmarks with company logo");
+
+INSERT INTO ISSUES (ISSUESLIST_ID, USER_ID_ASSIGNEDTO, SUMMARY, DESCRIPTION)
+VALUES (2, 5, "Invite guests for presentation", "Send invitations to guests");
+
+INSERT INTO ISSUES (ISSUESLIST_ID, USER_ID_ASSIGNEDTO, SUMMARY, DESCRIPTION)
+VALUES (3, 5, "List of guest", "Obtain acceptance of 2 bosses");
+
+INSERT INTO ISSUES (ISSUESLIST_ID, USER_ID_ASSIGNEDTO, SUMMARY, DESCRIPTION)
+VALUES (3, 2, "Prepare agenda for meeting", "1 page, 15 points");
+
+INSERT INTO ISSUES (ISSUESLIST_ID, USER_ID_ASSIGNEDTO, SUMMARY, DESCRIPTION)
+VALUES (3, 2, "List of interns for meeting", "5 interns");
+
+INSERT INTO ISSUES (ISSUESLIST_ID, USER_ID_ASSIGNEDTO, SUMMARY, DESCRIPTION)
+VALUES (3, 2, "Entrance cards for interns", "Leave the information in lodge with permission to entrance for special cards");
+
+INSERT INTO ISSUES (ISSUESLIST_ID, USER_ID_ASSIGNEDTO, SUMMARY, DESCRIPTION)
+VALUES (3, 1, "Text for presentation", "Text on slides accepted by 2 bosses");
+COMMIT;
