@@ -1,0 +1,13 @@
+{
+"brandname": "Audi",
+"modelname": "RS6",
+"enginecapacity": 4.00
+
+"seats": [
+"seat1": "alcantara, black",
+"seat2": "leather, white",
+"seat3": "velvet, grey",
+"seat4": "suede, red"
+]
+}
+
