@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<car>
+  <carBrand>Audi</carBrand>
+  <model>A6</model>
+  <engineCapacity>3.0</engineCapacity>
+  <numberOfSeats>5</numberOfSeats>
+  <bodyType>stationWagon</bodyType>
+  <color>black</color>
+</car>
+
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="www.audi-kodilla.pl"
+           xmlns="www.audi-kodilla.pl"
+           elementFormDefault="qualified">
+
+<xs:element name="car">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="carBrand" type="xs:string"/>
+      <xs:element name="model" type="xs:string"/>
+      <xs:element name="engineCapacity" type="xs:decimal"/>
+      <xs:element name="numberOfSeats" type="xs:integer"/>
+      <xs:element name="bodyType" type="xs:string"/>
+      <xs:element name="color" type="xs:string" default="black"/>
